@@ -1,0 +1,43 @@
+@background-color:#f66;
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+.border-shadow(@x,@y,@z,@color){
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+@base-color: #111;
+@red: #842210;
+
+.border{
+  border: 20px solid #ddd;
+  text-align: center;
+  margin-top: 3px;
+  .border-radius(5px);
+  .border-shadow(3px,3px,5px,#000);
+  //  color: @base-color + #003300;
+  // 饱和度降低 10%
+  // border-color: desaturate(@red, 10%);
+}
+div{
+  width: 120px;
+  height: 120px;
+  background: @background-color;
+  .border;
+}
+ul>li{
+  width: 50px;
+  height: 20px;
+  background: @background-color;
+  .border;
+  &.special{
+    font-size: 40px;
+    .a{
+      color: red;
+    }
+  }
+
+}

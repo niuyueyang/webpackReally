@@ -1,0 +1,10 @@
+$color:orange !default; //定义全局变量
+.block{
+  color:$color; //调用全局变量；
+}
+.em{
+    $color:red; //定义局部变量
+    a{
+      color:$color;//调用局部变量
+    }
+}
